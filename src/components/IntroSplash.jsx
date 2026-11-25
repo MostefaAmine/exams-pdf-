@@ -160,6 +160,9 @@ export default function IntroSplash({ onDone }) {
           <p className="text-gold font-mono text-2xl sm:text-3xl font-bold tracking-tight" style={{ letterSpacing: '-0.01em' }}>
             AYOUCHiii
           </p>
+          <p className="text-ivory/30 text-[11px] font-mono tracking-widest uppercase mt-1">
+            to help you writing exams of TATA
+          </p>
         </div>
 
         {/* Loading dots or enter button */}
