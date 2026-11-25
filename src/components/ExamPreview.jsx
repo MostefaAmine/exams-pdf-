@@ -109,11 +109,8 @@ function QuestionsListPreview({ questions }) {
                   className="flex items-start justify-between gap-3 text-xs sm:text-sm"
                 >
                   <div className="flex-1">
-                    <span className="font-bold ml-1.5" dir="rtl">
-                      {getArabicPartLetter(sqIdx)}
-                      <span dir="ltr">(</span>
-                    </span>
-                    <span>{sq.text?.trim() || '...'}</span>
+                    <span className="font-bold ml-1.5" dir="ltr">(</span><span className="font-bold ml-0.5">{getArabicPartLetter(sqIdx)}</span>
+                    <span className="mr-1">{sq.text?.trim() || '...'}</span>
                   </div>
                   {sq.mark?.trim() && (
                     <span className="text-xs shrink-0">

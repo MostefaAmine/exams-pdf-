@@ -165,8 +165,8 @@ export default function QuestionEditor({
               key={sq.id}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 bg-ivory/70 border border-border/80 p-2 rounded-sm"
             >
-              <span className="text-xs font-bold text-olive shrink-0 px-1">
-                {ARABIC_SUB_LETTERS[sqIdx] || sqIdx + 1}-
+              <span className="text-xs font-bold text-olive shrink-0 px-1" dir="ltr">
+                ({ARABIC_SUB_LETTERS[sqIdx] || sqIdx + 1}
               </span>
               <input
                 type="text"
