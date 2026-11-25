@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF8F3;
+  --color-ivory-dark: #F2EDE1;
+  --color-paper: #FFFFFF;
+  --color-forest: #1B4332;
+  --color-forest-dark: #133023;
+  --color-olive: #526D4E;
+  --color-olive-light: #E9EFE7;
+  --color-charcoal: #1F2421;
+  --color-muted: #5C635E;
+  --color-gold: #B59449;
+  --color-gold-light: #F6F0E0;
+  --color-border: #DDD6C5;
+  --color-danger: #9B2C2C;
+  --color-danger-light: #FDF2F2;
+
+  --font-sans: "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  --font-serif-ar: "Amiri", "Noto Naskh Arabic", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+  }
+
+  /* Ensure Arabic diacritics have comfortable vertical space */
+  .font-religious {
+    font-family: var(--font-serif-ar);
+    line-height: 2.1;
+  }
+}
+
+@layer components {
+  .academic-panel {
+    @apply bg-paper border border-border rounded-sm shadow-[0_1px_2px_rgba(31,36,33,0.04)];
+  }
+
+  .academic-input {
+    @apply w-full bg-ivory/60 border border-border rounded-sm px-3 py-2 text-sm text-charcoal placeholder:text-muted/60 focus:outline-none focus:border-forest focus:bg-paper transition-colors;
+  }
+
+  .academic-label {
+    @apply block text-xs font-semibold text-forest mb-1.5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-forest text-ivory px-4 py-2 rounded-sm text-sm font-medium hover:bg-forest-dark transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-1.5 bg-paper border border-border text-charcoal px-3 py-1.5 rounded-sm text-sm font-medium hover:border-olive hover:text-forest hover:bg-ivory transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1 text-muted hover:text-forest hover:bg-olive-light/60 px-2 py-1 rounded-sm text-xs font-medium transition-colors cursor-pointer disabled:opacity-35 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger-ghost {
+    @apply inline-flex items-center justify-center gap-1 text-muted hover:text-danger hover:bg-danger-light px-2 py-1 rounded-sm text-xs font-medium transition-colors cursor-pointer;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 1.5cm 1.8cm 2cm 1.8cm;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  #exam-print-sheet {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@theme {
+  --color-ivory: #FAF8F3;
+  --color-ivory-dark: #F2EDE1;
+  --color-paper: #FFFFFF;
+  --color-forest: #1B4332;
+  --color-forest-dark: #133023;
+  --color-olive: #526D4E;
+  --color-olive-light: #E9EFE7;
+  --color-charcoal: #1F2421;
+  --color-muted: #5C635E;
+  --color-gold: #B59449;
+  --color-gold-light: #F6F0E0;
+  --color-border: #DDD6C5;
+  --color-danger: #9B2C2C;
+  --color-danger-light: #FDF2F2;
+
+  --font-sans: "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  --font-serif-ar: "Amiri", "Noto Naskh Arabic", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+  }
+
+  /* Ensure Arabic diacritics have comfortable vertical space */
+  .font-religious {
+    font-family: var(--font-serif-ar);
+    line-height: 2.1;
+  }
+}
+
+@layer components {
+  .academic-panel {
+    @apply bg-paper border border-border rounded-sm shadow-[0_1px_2px_rgba(31,36,33,0.04)];
+  }
+
+  .academic-input {
+    @apply w-full bg-ivory/60 border border-border rounded-sm px-3 py-2 text-sm text-charcoal placeholder:text-muted/60 focus:outline-none focus:border-forest focus:bg-paper transition-colors;
+  }
+
+  .academic-label {
+    @apply block text-xs font-semibold text-forest mb-1.5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-forest text-ivory px-4 py-2 rounded-sm text-sm font-medium hover:bg-forest-dark transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-1.5 bg-paper border border-border text-charcoal px-3 py-1.5 rounded-sm text-sm font-medium hover:border-olive hover:text-forest hover:bg-ivory transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1 text-muted hover:text-forest hover:bg-olive-light/60 px-2 py-1 rounded-sm text-xs font-medium transition-colors cursor-pointer disabled:opacity-35 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger-ghost {
+    @apply inline-flex items-center justify-center gap-1 text-muted hover:text-danger hover:bg-danger-light px-2 py-1 rounded-sm text-xs font-medium transition-colors cursor-pointer;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 1.5cm 1.8cm 2cm 1.8cm;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  #exam-print-sheet {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
